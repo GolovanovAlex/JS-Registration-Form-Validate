@@ -14,6 +14,14 @@ function checkEmail() {
   }
   emailField.classList.remove('invalid');
 }
+// ---- ---- Hide Password ---- ---- //
+const eyeIcons = document.querySelectorAll('.password-hide');
+eyeIcons.forEach((eyeIcon) => {
+  eyeIcon.addEventListener('click', () => {
+    const pInput = eyeIcon.parentElement.querySelector('input');
+    eyeIcon.classList.replace('bx-hide', 'bx-show');
+  });
+});
 
 // ---- ---- Calling Function on Form Sumbit ---- ---- //
 form.addEventListener('submit', (e) => {
