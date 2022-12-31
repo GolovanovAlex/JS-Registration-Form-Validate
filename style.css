@@ -44,6 +44,16 @@ form .input-field {
   border-radius: 8px;
   outline: none;
 }
+.input-field .password-hide {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #919191;
+  padding: 3px;
+  cursor: pointer;
+}
 .field .error {
   display: flex;
   align-items: center;
@@ -51,8 +61,17 @@ form .input-field {
   font-size: 14px;
   font-weight: 400;
   color: #d93025;
+  display: none;
 }
 .error .error-icon {
   font-size: 15px;
   margin-right: 6px;
+}
+.create-password .error {
+  align-items: flex-start;
+}
+.create-password .error-icon {
+  margin-top: 4px;
+}
+.button-field {
 }
