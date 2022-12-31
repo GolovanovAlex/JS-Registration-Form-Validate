@@ -44,6 +44,9 @@ form .input-field {
   border-radius: 8px;
   outline: none;
 }
+.invalid input {
+  border: 1px solid #d93025;
+}
 .input-field .password-hide {
   position: absolute;
   top: 50%;
@@ -62,6 +65,9 @@ form .input-field {
   font-weight: 400;
   color: #d93025;
   display: none;
+}
+.invalid .error {
+  display: flex;
 }
 .error .error-icon {
   font-size: 15px;
