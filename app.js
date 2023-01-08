@@ -1,3 +1,5 @@
+// ---- ---- const ---- ---- //
+
 const form = document.querySelector('form'),
   emailField = form.querySelector('.email-field'),
   emailInput = emailField.querySelector('.email'),
@@ -6,7 +8,7 @@ const form = document.querySelector('form'),
   cPassField = form.querySelector('.confirm-password'),
   cPassInput = cPassField.querySelector('.confirpassword');
 
-// ---- ---- Email Validation ---- ---- //
+// ---- ---- Email Validation Form ---- ---- //
 function checkEmail() {
   const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
   if (!emailInput.value.match(emailPattern)) {
@@ -14,7 +16,7 @@ function checkEmail() {
   }
   emailField.classList.remove('invalid');
 }
-// ---- ---- Hide Password ---- ---- //
+// ---- ---- Hide and Show Password ---- ---- //
 const eyeIcons = document.querySelectorAll('.password-hide');
 eyeIcons.forEach((eyeIcon) => {
   eyeIcon.addEventListener('click', () => {
@@ -28,7 +30,7 @@ eyeIcons.forEach((eyeIcon) => {
   });
 });
 
-// ---- ---- Password Validation ---- ---- //
+// ---- ---- Password Validation Form ---- ---- //
 function createPass() {
   const passPattern =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
@@ -38,7 +40,7 @@ function createPass() {
   }
   passField.classList.remove('invalid');
 }
-// ---- ---- Confirm Password Validation ---- ---- //
+// ---- ---- Confirm Password Validation Form ---- ---- //
 function confirmPass() {
   if (passInput.value !== cPassInput.value || cPassInput.value === '') {
     return cPassField.classList.add('invalid');
